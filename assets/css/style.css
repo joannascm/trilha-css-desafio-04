@@ -9,10 +9,11 @@
     border:0;
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
+    max-width: 100%;
 }
 
 img{ 
-    width: 38rem;
+    width: 40%;
 }
 
 /*Header*/
@@ -50,7 +51,7 @@ header div{
 }
 
 button{
-    height: 44px;
+    height: 3rem;
     border-radius: 24px;
 }
 
@@ -120,31 +121,65 @@ footer img{
   
 /*Media Queries*/
 
-@media screen and (max-width: 768px) {
-    #conteudo-cabecalho{
-        padding: 0 32px;
+@media screen and (max-width: 980px) {
+    html {
+        width: 100vw;
     }
-    
+    img{
+        width: 100%;
+    }
+    #conteudo-cabecalho{
+        padding: 0 32px; 
+    }
+    h1{
+        font-size: 2rem;
+    }
     header div{
         flex-direction: column;
         align-items: center;
     }
+   
     section{
         flex-direction: column;
+        gap: 20px;
     }
     .container{
-        width: 90vw;
+        width: 80vw;
+        text-align: center;
+        align-items: center;
     }
     .section-par{
         flex-direction: column-reverse;
     }
     h2{
         font-size: 1.5rem;
+    }   
+    footer{
+        height: 5rem;
+    }
+    footer img{
+        width: 10rem;
+    }
+}
+@media screen and (max-width: 540px) {
+    #conteudo-cabecalho{
+        text-align: start;
+        align-items: start;
+    }
+    #button-download,#button-online{
+        width: 90vw;
+    }
+    .container{
+        width: 90vw;
+        align-items: start;
+        text-align: start;
     }
     #section-final h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        text-align: start;
     }
     #section-final p{
         width: 90vw;
+        text-align: start;
     }
 }
